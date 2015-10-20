@@ -8,7 +8,8 @@
 #include <string.h>
 #include <fcntl.h>
 
-#define NB_REGS = 32	/*!< Nombre de registres */
+#define NB_REGS 32	/*!< Nombre de registres */
+#define SIZE_MEM 1024	/*!< Taille maximale de la mémoire*/
 
 typedef enum
 {
@@ -33,7 +34,7 @@ typedef enum
 	SCALL,	/*!< Appel système. */
 } Commande;
 
-
+int init();
 int fetch();
 void decode(uint32_t instr);
 void eval();
